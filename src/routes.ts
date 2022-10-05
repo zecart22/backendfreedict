@@ -11,6 +11,7 @@ import { SendWordToHistoricalController } from "./controllers/word/SendWordToHis
 import { ListAllWordsController } from "./controllers/word/ListAllWordsController";
 import { ListAllFavoritesWordsController } from "./controllers/word/ListAllFavoritesWordsController";
 import { ListAllHistoricalWordsController } from "./controllers/word/ListAllHistoricalWordsController";
+import { WordDetailByIdController } from "./controllers/word/WordDetailByIdController";
 const router = Router();
 
 //-- ROTAS USER --
@@ -55,9 +56,15 @@ router.get(
 );
 
 router.get(
-  "/lis/all/historical/words",
+  "/list/all/historical/words",
   isAthenticated,
   new ListAllHistoricalWordsController().handle
+);
+
+router.get(
+  "/word/details",
+  isAthenticated,
+  new WordDetailByIdController().handle
 );
 
 export { router };
