@@ -8,6 +8,7 @@ import { ListWordsGenerateController } from "./controllers/word/ListWordsControl
 import { SendWordToFavoriteController } from "./controllers/word/SendWordToFavoriteController";
 import { RemoveWordFavoriteController } from "./controllers/word/RemoveWordFavoriteController";
 import { SendWordToHistoricalController } from "./controllers/word/SendWordToHistoricalController";
+import { ListAllWordsController } from "./controllers/word/ListAllWordsController";
 const router = Router();
 
 //-- ROTAS USER --
@@ -37,6 +38,12 @@ router.post(
   "/send/word/historical",
   isAthenticated,
   new SendWordToHistoricalController().handle
+);
+
+router.get(
+  "/list/all/words",
+  isAthenticated,
+  new ListAllWordsController().handle
 );
 
 export { router };
