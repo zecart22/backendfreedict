@@ -5,7 +5,8 @@ import { AuthUserController } from "./controllers/user/AuthUserController";
 import { DetailUserController } from "./controllers/user/DetailUserController";
 import { isAthenticated } from "./middlewares/isAthenticated";
 import { ListWordsGenerateController } from "./controllers/word/ListWordsController";
-import { SendWordToFavoriteController } from "./controllers/user/SendWordToFavoriteController";
+import { SendWordToFavoriteController } from "./controllers/word/SendWordToFavoriteController";
+import { RemoveWordFavoriteController } from "./controllers/word/RemoveWordFavoriteController";
 const router = Router();
 
 //-- ROTAS USER --
@@ -20,9 +21,15 @@ router.get("/user/details", isAthenticated, new DetailUserController().handle);
 router.post("/words", isAthenticated, new ListWordsGenerateController().handle);
 
 router.put(
-  "/word/favorite",
+  "/word/send/favorite",
   isAthenticated,
   new SendWordToFavoriteController().handle
+);
+
+router.put(
+  "/word/remove/favorite",
+  isAthenticated,
+  new RemoveWordFavoriteController().handle
 );
 
 export { router };
