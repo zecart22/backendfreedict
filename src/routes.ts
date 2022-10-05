@@ -33,7 +33,7 @@ router.delete(
   new RemoveWordFavoriteController().handle
 );
 
-router.put(
+router.post(
   "/send/word/historical",
   isAthenticated,
   new SendWordToHistoricalController().handle
