@@ -27,7 +27,7 @@ router.post(
   new SendWordToFavoriteController().handle
 );
 
-router.put(
+router.delete(
   "/remove/word/favorite",
   isAthenticated,
   new RemoveWordFavoriteController().handle

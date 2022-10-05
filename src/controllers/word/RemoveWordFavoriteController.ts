@@ -3,12 +3,12 @@ import { RemoveWordFavoriteService } from "../../services/word/RemoveWordFavorit
 
 class RemoveWordFavoriteController {
   async handle(req: Request, res: Response) {
-    const word_id = req.query.word_id as string;
+    const favoriteWord_id = req.query.favoriteWord_id as string;
 
     const removeWordFavoriteService = new RemoveWordFavoriteService();
 
     const word = await removeWordFavoriteService.execute({
-      word_id,
+      favoriteWord_id,
     });
 
     return res.json(word);
