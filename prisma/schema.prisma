@@ -29,7 +29,7 @@ isFavorite Boolean @default(false)
 isInHistoric Boolean @default(false)
 created_at DateTime? @default(now())
 updated_at DateTime? @default(now())
-category User @relation(fields: [user_id], references:[id])
+user User @relation(fields: [user_id], references:[id])
 @@map("words")
 user_id String
 }

@@ -899,6 +899,11 @@ vary@^1, vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+word-list@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/word-list/-/word-list-3.1.0.tgz#c73180ce97399758b7aec9658a410508095f12bc"
+  integrity sha512-fm5Wqf3ema+SNTJ/WFMSL/mM4iVM+yBRyEI/KjrJTPPLsn72GbNBBK94vORD7nUc9DxE7r3H2MpuiVtiA9FzDg==
+
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
