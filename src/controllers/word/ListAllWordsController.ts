@@ -7,11 +7,11 @@ class ListAllWordsController {
     const skip = req.query.take as string;
 
     const listAllWordsService = new ListAllWordsService();
-    const product = await listAllWordsService.execute({
+    const word = await listAllWordsService.execute({
       skip,
       take,
     });
-    return res.json(product);
+    return res.json(word);
   }
 }
 
