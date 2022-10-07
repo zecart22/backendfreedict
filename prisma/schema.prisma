@@ -48,6 +48,7 @@ updated_at DateTime? @default(now())
 user User @relation(fields: [user_id], references: [id])
 word Word @relation(fields: [word_id], references: [id])
 
+
 @@map("favorites")
 user_id String
 word_id String

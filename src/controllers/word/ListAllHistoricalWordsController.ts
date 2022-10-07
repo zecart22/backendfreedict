@@ -3,14 +3,10 @@ import { ListAllHistoricalWordsService } from "../../services/word/ListAllHistor
 
 class ListAllHistoricalWordsController {
   async handle(req: Request, res: Response) {
-    const take = req.query.take as string;
-    const skip = req.query.take as string;
     const user_id = req.query.user_id as string;
 
     const listAllHistoricalWordsService = new ListAllHistoricalWordsService();
     const word = await listAllHistoricalWordsService.execute({
-      skip,
-      take,
       user_id,
     });
 

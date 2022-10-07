@@ -1,22 +1,44 @@
 import prismaClient from "../../prisma";
 
 interface WordsRequest {
-  take: string;
-  skip: string;
   user_id: string;
 }
 
 class ListAllHistoricalWordsService {
-  async execute({ take, skip, user_id }: WordsRequest) {
-    const favoriteWords = await prismaClient.historical.findMany({
+  async execute({ user_id }: WordsRequest) {
+    let word = "";
+
+    let index = -1;
+
+    const historicalWords = await prismaClient.historical.findMany({
       where: {
         user_id: user_id,
       },
-      take: Number(take),
-      skip: Number(skip),
     });
 
-    return favoriteWords;
+    const arrayWordsId = historicalWords.map((word) => word.word_id);
+
+    const historicalNameWords = [];
+
+    while (index < arrayWordsId.length) {
+      index++;
+      word = arrayWordsId[index];
+      if (word === undefined) {
+      } else {
+        const wordsData = await prismaClient.word.findUnique({
+          where: {
+            id: word,
+          },
+          select: {
+            id: true,
+            word: true,
+          },
+        });
+        historicalNameWords.push(wordsData);
+      }
+    }
+
+    return historicalNameWords;
   }
 }
 
