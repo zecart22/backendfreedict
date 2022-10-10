@@ -8,6 +8,10 @@ interface WordsRequest {
 class ListAllWordsService {
   async execute({ take, skip }: WordsRequest) {
     const words = await prismaClient.word.findMany({
+      select: {
+        id: true,
+        word: true,
+      },
       take: Number(take),
       skip: Number(skip),
     });
