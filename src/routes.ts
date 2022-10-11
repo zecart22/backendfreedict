@@ -13,6 +13,7 @@ import { ListAllFavoritesWordsController } from "./controllers/word/ListAllFavor
 import { ListAllHistoricalWordsController } from "./controllers/word/ListAllHistoricalWordsController";
 import { WordDetailByIdController } from "./controllers/word/WordDetailByIdController";
 import { ClearWordsHistoricalController } from "./controllers/word/ClearWordsHistoricalController";
+import { ClearWordsFavoriteController } from "./controllers/word/ClearWordsFavoriteController";
 const router = Router();
 
 //-- ROTAS USER --
@@ -26,11 +27,7 @@ router.get("/user/details", isAthenticated, new DetailUserController().handle);
 
 router.post("/words", isAthenticated, new ListWordsGenerateController().handle);
 
-router.post(
-  "/send/word/favorite",
-  isAthenticated,
-  new SendWordToFavoriteController().handle
-);
+router.post("/send/word/favorite", new SendWordToFavoriteController().handle);
 
 router.delete(
   "/remove/word/favorite",
@@ -40,7 +37,6 @@ router.delete(
 
 router.post(
   "/send/word/historical",
-
   new SendWordToHistoricalController().handle
 );
 
@@ -72,6 +68,12 @@ router.delete(
   "/clear/historical",
   isAthenticated,
   new ClearWordsHistoricalController().handle
+);
+
+router.delete(
+  "/clear/favorite",
+  isAthenticated,
+  new ClearWordsFavoriteController().handle
 );
 
 export { router };

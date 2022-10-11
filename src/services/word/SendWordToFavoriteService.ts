@@ -21,25 +21,15 @@ class SendWordToFavoriteService {
       throw new Error("This word does not exist");
     }
 
-    const isWordAlredyExistsInFavorite = prismaClient.word.findFirst({
+    const isWordAlredyExistsInFavorite = prismaClient.favorite.findFirst({
       where: {
         id: word_id,
-        isFavorite: true,
       },
     });
 
     /*  if (isWordAlredyExistsInFavorite) {
       throw new Error("This word alredy exists in favorites words section");
     } */
-
-    const updateWord = prismaClient.word.update({
-      where: {
-        id: word_id,
-      },
-      data: {
-        isFavorite: true,
-      },
-    });
 
     const favorite = prismaClient.favorite.create({
       data: {

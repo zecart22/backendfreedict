@@ -34,6 +34,7 @@ class ListAllFavoritesWordsService {
             word: true,
           },
         });
+
         favoriteNameWords.push(wordsData);
       }
     }
