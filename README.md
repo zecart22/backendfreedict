@@ -60,16 +60,16 @@ Retorno:
       "email" : "newuser@email.com",
       "password" : "123123"
 
+  }`
+
+- Retorno:
+  `
+  {
+  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+  "name": "Gil Gomes",
+  "email": "gilgomes@gil.com",
+  "token": "token"
   }
-
-Retorno:
-
-{
-"id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-"name": "Gil Gomes",
-"email": "gilgomes@gil.com",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2lsIEdvbWVzIiwiZW1haWwiOiJnaWxnb21lc0BnaWwuY29tIiwiaWF0IjoxNjY1OTM3MDI3LCJleHAiOjE2NjYzNjkwMjcsInN1YiI6Ijg3OTJmNTA4LTcwNjItNDc3Mi1hYmYyLTg2MmQ5YTliNTdmMSJ9.S31AsDzcnJKHdeEerFnbEVVpSwHz-rTAU7885n159SY"
-}
 
 `
 
@@ -84,16 +84,16 @@ Retorno:
       "email" : "newuser@email.com",
       "password" : "123123"
 
+  }`
+
+- Retorno:
+  `
+  {
+  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+  "name": "Gil Gomes",
+  "email": "gilgomes@gil.com",
+  "token": "token"
   }
-
-Retorno:
-
-{
-"id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-"name": "Gil Gomes",
-"email": "gilgomes@gil.com",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiR2lsIEdvbWVzIiwiZW1haWwiOiJnaWxnb21lc0BnaWwuY29tIiwiaWF0IjoxNjY1OTM3MDI3LCJleHAiOjE2NjYzNjkwMjcsInN1YiI6Ijg3OTJmNTA4LTcwNjItNDc3Mi1hYmYyLTg2MmQ5YTliNTdmMSJ9.S31AsDzcnJKHdeEerFnbEVVpSwHz-rTAU7885n159SY"
-}
 
 `
 
