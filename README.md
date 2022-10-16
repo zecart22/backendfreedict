@@ -102,14 +102,15 @@ Retorno:
 
       [
 
-  {
-  "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
-  "word": "travellings"
-  },
-  {
-  "id": "00015501-4226-4a95-8ae9-43700057501a",
-  "word": "kangaroos"
-  }
+        {
+         "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
+         "word": "travellings"
+        },
+        {
+         "id": "00015501-4226-4a95-8ae9-43700057501a",
+         "word": "kangaroos"
+        }
+
   ]
 
 <h5> Listando todas palavras favoritas</h5>
@@ -119,22 +120,23 @@ Retorno:
 
 - Corpo da Requisição(req.query):
 
-http://localhost:3333/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
+baseURL/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
 
 user_id = user_id
 
 - Retorno:
 
-        [
+  [
 
-  {
-  "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
-  "word": "travellings"
-  },
-  {
-  "id": "00015501-4226-4a95-8ae9-43700057501a",
-  "word": "kangaroos"
-  }
+        {
+        "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
+        "word": "travellings"
+        },
+        {
+        "id": "00015501-4226-4a95-8ae9-43700057501a",
+        "word": "kangaroos"
+        }
+
   ]
 
 <h5> Listando todas palavras do histórico</h5>
@@ -144,13 +146,13 @@ user_id = user_id
 
 - Corpo da Requisição(req.query):
 
-http://localhost:3333/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
+baseURL/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
 
 user_id = user_id
 
 - Retorno:
 
-        [
+  [
 
   {
   "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
