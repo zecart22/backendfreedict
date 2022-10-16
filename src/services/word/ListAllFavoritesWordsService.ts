@@ -7,7 +7,7 @@ interface WordsRequest {
 class ListAllFavoritesWordsService {
   async execute({ user_id }: WordsRequest) {
     let word = "";
-
+    let favoriteWordId = "";
     let index = -1;
 
     const favoriteWords = await prismaClient.favorite.findMany({
@@ -17,12 +17,14 @@ class ListAllFavoritesWordsService {
     });
 
     const arrayWordsId = favoriteWords.map((word) => word.word_id);
+    const arrayWordsLinkedUserId = favoriteWords.map((word) => word.id);
 
     const favoriteNameWords = [];
 
     while (index < arrayWordsId.length) {
       index++;
       word = arrayWordsId[index];
+      favoriteWordId = arrayWordsLinkedUserId[index];
       if (word === undefined) {
       } else {
         const wordsData = await prismaClient.word.findUnique({
@@ -35,7 +37,7 @@ class ListAllFavoritesWordsService {
           },
         });
 
-        favoriteNameWords.push(wordsData);
+        favoriteNameWords.push({ wordsData, favoriteWordId });
       }
     }
 
