@@ -85,6 +85,83 @@ Retorno:
      "email": "gilgomes@gil.com"
     }
 
+<h4> WORDS</h4>
+
+<h5> Listando todas as palavras</h5>
+
+`Metodo: Get`
+`baseURL/list/all/words`
+
+- Corpo da Requisição(req.query):
+  take: Quantas Words p/página
+  skip: Quantas palavras serão puladas ao carregar novas palavras.
+
+  baseURL/list/all/words?take=2&skip=1
+
+- Retorno:
+
+      [
+
+  {
+  "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
+  "word": "travellings"
+  },
+  {
+  "id": "00015501-4226-4a95-8ae9-43700057501a",
+  "word": "kangaroos"
+  }
+  ]
+
+<h5> Listando todas palavras favoritas</h5>
+
+`Metodo: Get`
+`baseURL/list/all/favorites/words `
+
+- Corpo da Requisição(req.query):
+
+http://localhost:3333/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
+
+user_id = user_id
+
+- Retorno:
+
+        [
+
+  {
+  "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
+  "word": "travellings"
+  },
+  {
+  "id": "00015501-4226-4a95-8ae9-43700057501a",
+  "word": "kangaroos"
+  }
+  ]
+
+<h5> Listando todas palavras do histórico</h5>
+
+`Metodo: Get`
+`baseURL/list/all/historical/words `
+
+- Corpo da Requisição(req.query):
+
+http://localhost:3333/list/all/favorites/words?user_id=8792f508-7062-4772-abf2-862d9a9b57f1
+
+user_id = user_id
+
+- Retorno:
+
+        [
+
+  {
+  "id": "0000da7f-ced2-44ff-8d1a-b42bbd2baf6b",
+  "word": "travellings"
+  },
+  {
+  "id": "00015501-4226-4a95-8ae9-43700057501a",
+  "word": "kangaroos"
+  }
+  ]
+
 <h4> Tecnologias utilizadas</h4>
 
 - `ReactJS`
