@@ -50,27 +50,7 @@
 <h5> Logando User</h5>
 
 `Metodo: Post`
-`baseURL/login`
-
-- Corpo da Requisição(req.body):
-
-      {
-      "email" : "newuser@email.com",
-      "password" : "123123"
-      }
-
-Retorno:
-{
-"id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-"name": "Gil Gomes",
-"email": "gilgomes@gil.com",
-"token": "token"
-}
-
-<h5> Logando User</h5>
-
-`Metodo: Post`
-`baseURL/login`
+`baseURL/login `
 
 - Corpo da Requisição(req.body):
 
@@ -84,7 +64,8 @@ Retorno:
       {
       "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
       "name": "New User",
-      "email": "newuser@email.com"
+      "email": "newuser@email.com",
+      "token": token,
       }
 
 <h5> Detalhes do User</h5>
