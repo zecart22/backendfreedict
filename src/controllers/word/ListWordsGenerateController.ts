@@ -4,13 +4,9 @@ import { ListWordsGenerateService } from "../../services/word/ListWordsGenerateS
 
 class ListWordsGenerateController {
   async handle(req: Request, res: Response) {
-    const { user_id } = req.body;
-
     const listWordsGenerateService = new ListWordsGenerateService();
 
-    const words = await listWordsGenerateService.execute({
-      user_id,
-    });
+    const words = await listWordsGenerateService.execute();
     return res.json(words);
   }
 }

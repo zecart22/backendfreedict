@@ -1,12 +1,8 @@
 import prismaClient from "../../prisma";
 import { words } from "../../controllers/word/wordsList";
 
-interface WordsProps {
-  user_id: string;
-}
-
 class ListWordsGenerateService {
-  async execute({ user_id }: WordsProps) {
+  async execute() {
     const arrayDataWords = [];
     let word = "";
 
@@ -18,7 +14,6 @@ class ListWordsGenerateService {
       const wordsData = await prismaClient.word.create({
         data: {
           word: word,
-          user_id: user_id,
         },
       });
     }

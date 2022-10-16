@@ -28,15 +28,6 @@ class SendWordToHistoricalService {
       },
     });
 
-    const updateWord = prismaClient.word.update({
-      where: {
-        id: word_id,
-      },
-      data: {
-        isInHistoric: true,
-      },
-    });
-
     return wordToHistorical;
   }
 }
