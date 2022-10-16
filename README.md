@@ -79,13 +79,13 @@ Retorno:
       "password" : "123123"
       }
 
-Retorno:
-{
-"id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-"name": "Gil Gomes",
-"email": "gilgomes@gil.com",
-"token": "token"
-}
+- Retorno:
+
+      {
+      "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+      "name": "New User",
+      "email": "newuser@email.com"
+      }
 
 <h5> Detalhes do User</h5>
 
