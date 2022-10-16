@@ -28,16 +28,14 @@
 
 <h5> Cadastrando User</h5>
 
--`Metodo: Post` -`baseURL/users`
+-` Metodo: Post``baseURL/users `
 
 - `Corpo da Requisição(req.body):
 
       {
       "name" : "New User",
       "email" : "newuser@email.com",
-      "password" : "123123"
-
-  }
+      "password" : "123123"}
 
 Retorno:
 
@@ -58,20 +56,10 @@ Retorno:
       {
 
       "email" : "newuser@email.com",
-      "password" : "123123"
-
-  }`
+      "password" : "123123"}`
 
 - Retorno:
-  `
-  {
-  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-  "name": "Gil Gomes",
-  "email": "gilgomes@gil.com",
-  "token": "token"
-  }
-
-`
+  ` { "id": "8792f508-7062-4772-abf2-862d9a9b57f1", "name": "Gil Gomes", "email": "gilgomes@gil.com", "token": "token"}`
 
 <h5> Logando User</h5>
 
@@ -82,20 +70,10 @@ Retorno:
       {
 
       "email" : "newuser@email.com",
-      "password" : "123123"
-
-  }`
+      "password" : "123123"}`
 
 - Retorno:
-  `
-  {
-  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-  "name": "Gil Gomes",
-  "email": "gilgomes@gil.com",
-  "token": "token"
-  }
-
-`
+  ` { "id": "8792f508-7062-4772-abf2-862d9a9b57f1", "name": "Gil Gomes", "email": "gilgomes@gil.com", "token": "token"}`
 
 <h5> Detalhes do User</h5>
 
