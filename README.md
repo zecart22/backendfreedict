@@ -22,62 +22,75 @@
 - `dê o comando yarn dev para rodar o servidor`
 - `no insominia, postman ou qualquer outro semelhante rode a rota /words/generate isso alimentará seu banco de dados com todas as palavras para aplicação funcionar`
 
-<h4> Rotas da API</h4>
+<h3> Rotas da API</h3>
 
-<h5> USER</h5>
+<h4> USER</h4>
 
 <h5> Cadastrando User</h5>
 
--` Metodo: Post``baseURL/users `
+`Metodo: Post`
+`baseURL/users `
 
-- `Corpo da Requisição(req.body):
+- Corpo da Requisição(req.body):
 
       {
       "name" : "New User",
       "email" : "newuser@email.com",
-      "password" : "123123"}
+      "password" : "123123"
+      }
 
-Retorno:
+- Retorno:
 
-{
-"id": "8792f508-7062-4772-abf2-862d9a9b57f1",
-"name": "New User",
-"email": "newuser@email.com"
-}
-
-`
+  {
+  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+  "name": "New User",
+  "email": "newuser@email.com"
+  }
 
 <h5> Logando User</h5>
 
--`Metodo: Post` -`baseURL/login`
+`Metodo: Post`
+`baseURL/login`
 
-- `Corpo da Requisição(req.body):
+- Corpo da Requisição(req.body):
 
       {
-
       "email" : "newuser@email.com",
-      "password" : "123123"}`
+      "password" : "123123"
+      }
 
 - Retorno:
-  ` { "id": "8792f508-7062-4772-abf2-862d9a9b57f1", "name": "Gil Gomes", "email": "gilgomes@gil.com", "token": "token"}`
+  {
+  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+  "name": "Gil Gomes",
+  "email": "gilgomes@gil.com",
+  "token": "token"
+  }
 
 <h5> Logando User</h5>
 
--`Metodo: Post` -`baseURL/login`
+`Metodo: Post`
+`baseURL/login`
 
-- `Corpo da Requisição(req.body):
+- Corpo da Requisição(req.body):
 
       {
-
       "email" : "newuser@email.com",
-      "password" : "123123"}`
+      "password" : "123123"
+      }
 
 - Retorno:
-  ` { "id": "8792f508-7062-4772-abf2-862d9a9b57f1", "name": "Gil Gomes", "email": "gilgomes@gil.com", "token": "token"}`
+  {
+  "id": "8792f508-7062-4772-abf2-862d9a9b57f1",
+  "name": "Gil Gomes",
+  "email": "gilgomes@gil.com",
+  "token": "token"
+  }
 
 <h5> Detalhes do User</h5>
 
--`Metodo: Get` -`baseURL/user/details`
+`Metodo: Get`
+`baseURL/user/details`
 
 Athentication:
 
@@ -86,12 +99,10 @@ Prefix: Bearer
 
 Retorno:
 
-{
-"name": "Gil Gomes",
-"email": "gilgomes@gil.com"
-}
-
-`
+    {
+     "name": "Gil Gomes",
+     "email": "gilgomes@gil.com"
+    }
 
 <h4> Tecnologias utilizadas</h4>
 
