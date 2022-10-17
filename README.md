@@ -22,48 +22,50 @@
 - `dê o comando yarn dev para rodar o servidor`
 - `no insominia, postman ou qualquer outro semelhante rode a rota /words/generate isso alimentará seu banco de dados com todas as palavras para aplicação funcionar`
 
+<h4> Veja as rotas e detalhes da aplicação no link abaixo</h4>
 <a href="https://distinct-domain-f13.notion.site/Free-Dict-API-a2f2c842b8f848d3b1975fa93e209e1f" title="deploy">DOCUMENTAÇÃO FREEDICT API</a></br>
 
 <h4> Tecnologias utilizadas</h4>
 
-- `ReactJS`
+- `NodeJS`
 - `Typescript`
-- `HTML5`
-- `CSS`
-- `Chakra UI`
-- `Context API`
-- `React Router Dom`
-- `AXIOS`
-- `Yup`
+- `Express`
+- `Prisma ORM`
+- `PostgresQl`
+- `WordList API`
+- `Bycrypt`
+- `Cors`
+- `Dotenv`
 
 <h4> Por que da Stack ?</h4>
 
 <a href="https://ibb.co/fxCMjy4"><img src="https://i.ibb.co/fxCMjy4/image6.png" alt="image6" border="0"></a>
 
 <ul>
-  <li> React foi utilizado por minha familiaridade com a ferramenta</li>
+  <li> NodeJS foi utilizado por minha familiaridade com a ferramenta</li>
   <li>Typescript para tipagem que facilita o gerenciamento do projeto aumentando minha performace como desenvolvedor</li>
-  <li>Chakra UI é uma poderosa Lib que utilizo muito para estilização das minhas aplicações, ela me ajuda a ganhar tempo e qualidade no trabalho em relação ao Syled Components ou CSS puro</li>
-  <li>Context API para centralizar e gerenciar todas informações que eu preciso</li>
-  <li>Axios para requisições</li>
-  <p>Yup para montagem do schema e controle dos forms e envio do "data" em conformidade com o que se pede na documentação da API </p>
+  <li>Postgres por ser banco de dados relacional robusto e simples de ultilizar</li>
 
 </ul>
 
-<h4> Estrutura dos diretórios</h4>
+<h4> Estrutura dos diretórios arquitetura MSC</h4>
+
+      +prisma
+       +---------migrations
+       +schema.prisma
 
 -     src
-      +---------assests
-                +-------images : nesse diretório estão todas as imagens uitlizadas na aplicação.
+      +---------Controllers
+                +-------USER
+                +-------WORD
 
-      +----------components : nesse diretório estão todos componentes utilizados na aplicação.
+      +----------middlewares
 
-      +----------contexts: nesse diretório estão centralizadas todas as variáveis da aplicação.
+      +----------prisma
 
-      +----------pages: nesse diretório estão todas as páginas da aplicação.
+      +----------service
 
-      +----------routes: nesse direitório estão todas as rotas das páginas da aplicação.
+      +routes
+      +server
 
-      +----------services: nesse diretório está localizada o link da API.
-
-      +----------style: nesse diretório está localizado o Theme que trás todo padrão de estilização da aplicação.
+      +.env
