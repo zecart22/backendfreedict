@@ -14,6 +14,10 @@
 
 - `yarn install`
 
+<h4> Front End da Aplicação <h4>
+
+- `https://github.com/zecart22/frontendfreedict/tree/main/frontendfreedict`
+
 <h4> Rodando projeto</h4>
 
 -`crie um banco de dados no postgres e guarde o user, a senha e o nome do banco de dados`
