@@ -64,7 +64,8 @@
       +----------prisma
 
       +----------service
-
+                +-------USER
+                +-------WORD
       +routes
       +server
 
